@@ -5,7 +5,9 @@ export class Processor {
     userInput.consentGiven = true
   }
 
-  checkConsent(userInput: User):boolean {
+  checkConsent(userInput: User): boolean {
     return userInput.consentGiven === true
   }
+
+
 }
