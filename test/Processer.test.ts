@@ -34,7 +34,7 @@ describe('Processor Class', () => {
       expect(actual).toBeFalsy()
     })
 
-    test('A user younger than 18 cannot give consent; consentGiven field will be undefined and checkConsent method will return false', () => {
+    test('A user younger than 18 cannot give consent', () => {
       const youngerUser = {
         ...user,
         age: 17,
@@ -46,7 +46,7 @@ describe('Processor Class', () => {
       expect(processor.checkConsent(youngerUser)).toBe(false)
     })
 
-    test('A user aged exactly 18 can give consent; consentGiven field will be true and checkConsent method will return true', () => {
+    test('A user aged exactly 18 can give consent', () => {
       const userAged18 = {
         ...user,
         age: 18,
@@ -58,7 +58,7 @@ describe('Processor Class', () => {
       expect(processor.checkConsent(userAged18)).toBe(true)
     })
 
-    test('A user older than 18 can give consent; consentGiven field will be true and checkConsent method will return true', () => {
+    test('A user older than 18 can give consent', () => {
       // default age for user = 21
       processor.giveConsent(user)
 
@@ -66,7 +66,7 @@ describe('Processor Class', () => {
       expect(processor.checkConsent(user)).toBe(true)
     })
 
-    test('revokeConsent method revokes consent; consentGiven field will be false and checkConsent method will return false', () => {
+    test('revokeConsent method revokes consent', () => {
       processor.giveConsent(user)
 
       expect(user.consentGiven).toBe(true)

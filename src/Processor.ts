@@ -8,15 +8,12 @@ export class Processor {
 
     userInput.consentGiven = true
   }
-
   public revokeConsent(userInput: User): void {
     userInput.consentGiven = false
   }
-
   public checkConsent(userInput: User): boolean {
     return userInput.consentGiven === true
   }
-
   private verifyAge(userInput: User): boolean {
     return userInput.age >= this.AGE_MAJORITY_YRS
   }
