@@ -1,9 +1,10 @@
 {
-  "name": "qa_auto_hw_w3_d1",
+  "name": "qa_auto_hw_w3",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
     "test": "jest",
+    "test:w": "jest --watch",
     "format": "npx prettier --write ."
   },
   "keywords": [],

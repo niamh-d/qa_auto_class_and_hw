@@ -1,15 +1,24 @@
+type UserData = {
+  firstName: string
+  lastName: string
+  phone: string
+  address: string
+  age: number
+}
+
 export class User {
   firstName: string
   lastName: string
   phone: string
   address: string
+  age: number
   consentGiven: boolean | undefined
 
-  constructor(firstName: string, lastName: string, phone: string, address: string) {
-    this.firstName = firstName
-    this.lastName = lastName
-    this.phone = phone
-    this.address = address
+  constructor(userData: UserData) {
+    this.firstName = userData.firstName
+    this.lastName = userData.lastName
+    this.phone = userData.phone
+    this.address = userData.address
+    this.age = userData.age
   }
-
 }
