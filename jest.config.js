@@ -1,5 +1,5 @@
-const baseDir = '<rootDir>/src'
-const baseTestDir = '<rootDir>/test'
+const baseDir = '<rootDir>/src/KYC'
+const baseTestDir = '<rootDir>/test/KYC'
 
 module.exports = {
   preset: 'ts-jest',
