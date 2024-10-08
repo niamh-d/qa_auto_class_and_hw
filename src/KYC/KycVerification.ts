@@ -10,6 +10,11 @@ export type UserData = {
   address: string
 }
 
+export type BalticBaseUser = UserData & {
+  mobileIDAuthorization?: undefined | boolean
+  eParakstsForLatvia?: undefined | boolean
+}
+
 export class KycVerification {
   private readonly MIN_AGE_ESTONIA = 16
   private readonly MIN_AGE_LATVIA = 18
