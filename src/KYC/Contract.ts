@@ -1,6 +1,6 @@
 import {BalticBaseUser} from "./KycVerification";
 
-class Contract {
+export class Contract {
     title = null
     signed = false
 
